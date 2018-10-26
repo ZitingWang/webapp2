@@ -1,4 +1,5 @@
 let Message = require('../models/message');
+let Information = require('../models/informations');
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
@@ -58,7 +59,6 @@ router.fuzzy = (req, res) =>{
 router.addMessage = (req, res) => {
 
     res.setHeader('Content-Type', 'application/json');
-
     var message = new Message();
     message.sender = req.body.sender;
     message.content = req.body.content;
@@ -68,12 +68,14 @@ router.addMessage = (req, res) => {
         else
             res.json({ message: 'Message sent by '+ req.body.sender+' Successfully Added!', data: message });
     });
+
+
 }
 
 
 router.deleteMessage = (req, res) => {
 
-    Message.findByIdAndRemove(req.params.id, function(err) {
+    Message.findOneAndRemove(req.params.sender, function(err) {
         if (err)
             res.json({ message: 'Message NOT DELETED!', errmsg : err } );
         else
@@ -91,5 +93,25 @@ router.deleteAll = (req, res) => {
     });
 }
 
+router.findaoms = (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+
+    Message.aggregate([
+        //{$match: {"sender":"wzt"}},
+        {$group: {
+            "_id": "$sender",
+            "count": {$sum: 1}}
+        }],function (err,messages) {
+
+        if (err) {
+            res.json({errmsg: err});
+        } else {
+            res.send(JSON.stringify(messages, null, 5));
+
+        }
+    });
+
+    //res.json({ message: 'Message Successfully Deleted!'});
+}
 
 module.exports = router;

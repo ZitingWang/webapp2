@@ -25,14 +25,15 @@ app.use('/users', usersRouter);
 
 //routes/informations.js
 app.get('/informations', informations.findAll);
-app.get('/informations/aom', informations.findTotalaom);
 app.get('/informations/:id', informations.findOne);
 app.get('/informations/f/:key', informations.fuzzy);
 app.get('/informations/t/table', informations.findfromtables);
+app.get('/informations/aom', informations.findTotalaom);
 app.post('/informations',informations.addInformation);
-app.put('/informations/:id', informations.incrementaom);
-app.delete('/informations/:id', informations.deleteInformation);
+app.put('/informations/:username', informations.incrementaom);
+app.delete('/informations/:username', informations.deleteInformation);
 app.delete('/informations', informations.deleteAll);
+
 //routes/user.js
 app.get('/user', user.findAll);
 app.get('/user/:id', user.findOne);
@@ -40,13 +41,16 @@ app.get('/user/f/:key', user.fuzzy);
 app.post('/user',user.addUser);
 app.delete('/user/:id', user.deleteUser);
 app.delete('/user', user.deleteAll);
+
 //routes/message.js
 app.get('/message', message.findAll);
 app.get('/message/:id', message.findOne);
 app.get('/message/f/:key', message.fuzzy);
 app.post('/message',message.addMessage);
-app.delete('/message/:id', message.deleteMessage);
+app.delete('/message/:sender', message.deleteMessage);
 app.delete('/message', message.deleteAll);
+app.get('/message/s/find', message.findaoms);
+//routes finish
 
 app.use(function(req, res, next) {
     next(createError(404));

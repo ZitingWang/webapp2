@@ -1,0 +1,7 @@
+{
+  "message": "Information NOT Found!",
+  "errmsg": {
+    "message": "Parameter \"filter\" to find() must be an object, got 1001",
+    "name": "ObjectParameterError"
+  }
+}

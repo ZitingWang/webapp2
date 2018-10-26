@@ -55,15 +55,15 @@ router.findfromtables = (req, res) => {
             from:"users",
             localField: "username",
             foreignField:"username",
-            as:"user's information"
+            as:"users' information"
             }
         }
-        ],function (err,book) {
+        ],function (err,informations) {
 
         if (err) {
             res.json({errmsg: err});
         } else {
-            res.send(JSON.stringify(book, null, 5));
+            res.send(JSON.stringify(informations, null, 5));
         }
     });
 }
@@ -84,10 +84,10 @@ router.fuzzy = (req, res) =>{
         }
     })
 }
-function getTotalVotes(array) {
-    let totalVotes = 0;
-    array.forEach(function(obj) { totalVotes += obj.amountofmessage; });
-    return totalVotes;
+function getTotalaom(array) {
+    let totalaom = 0;
+    array.forEach(function(obj) { totalaom += obj.amountofmessage; });
+    return totalaom;
 }
 
 router.addInformation = (req, res) => {
@@ -109,16 +109,16 @@ router.addInformation = (req, res) => {
 
 router.incrementaom = (req, res) => {
 
-    Information.findById(req.params.id, function(err,information) {
+    Information.findOne({"username":req.params.username}, function(err,information) {
         if (err)
             res.json({ message: 'Information NOT Found!', errmsg : err } );
         else {
             information.amountofmessage += 1;
             information.save(function (err) {
                 if (err)
-                    res.json({ message: 'Information NOT UpVoted!', errmsg : err } );
+                    res.json({ message: 'Information NOT Increased!', errmsg : err } );
                 else
-                    res.json({ message: 'Information Successfully Upvoted!', data: information });
+                    res.json({ message: 'Information Successfully Increased!', data: information });
             });
         }
     });
@@ -126,7 +126,7 @@ router.incrementaom = (req, res) => {
 
 router.deleteInformation = (req, res) => {
 
-    Information.findByIdAndRemove(req.params.id, function(err) {
+    Information.findOneAndRemove(req.params.id, function(err) {
         if (err)
             res.json({ message: 'Information NOT DELETED!', errmsg : err } );
         else
@@ -139,7 +139,7 @@ router.deleteAll = (req, res) => {
         if (err)
             res.json({ message: 'Information NOT DELETED!', errmsg : err } );
         else
-            res.json({ message: 'Information Successfully Deleted!'});
+            res.json({ message: 'All of Information Successfully Deleted!'});
     });
 }
 
@@ -150,7 +150,7 @@ router.findTotalaom = (req, res) => {
         if (err)
             res.send(err);
         else
-            res.json({ totalvotes : getTotalVotes(informations) });
+            res.json({ totalmessages : getTotalaom(informations) });
     });
 }
 
