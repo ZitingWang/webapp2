@@ -126,7 +126,7 @@ router.incrementaom = (req, res) => {
 
 router.deleteInformation = (req, res) => {
 
-    Information.findOneAndRemove(req.params.id, function(err) {
+    Information.findOneAndRemove({"username":req.params.username}, function(err) {
         if (err)
             res.json({ message: 'Information NOT DELETED!', errmsg : err } );
         else

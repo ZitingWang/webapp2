@@ -28,7 +28,7 @@ app.get('/informations', informations.findAll);
 app.get('/informations/:id', informations.findOne);
 app.get('/informations/f/:key', informations.fuzzy);
 app.get('/informations/t/table', informations.findfromtables);
-app.get('/informations/aom', informations.findTotalaom);
+app.get('/informations/a/aom', informations.findTotalaom);
 app.post('/informations',informations.addInformation);
 app.put('/informations/:username', informations.incrementaom);
 app.delete('/informations/:username', informations.deleteInformation);

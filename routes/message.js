@@ -75,7 +75,7 @@ router.addMessage = (req, res) => {
 
 router.deleteMessage = (req, res) => {
 
-    Message.findOneAndRemove(req.params.sender, function(err) {
+    Message.findOneAndRemove({"sender":req.params.sender}, function(err) {
         if (err)
             res.json({ message: 'Message NOT DELETED!', errmsg : err } );
         else

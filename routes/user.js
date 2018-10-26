@@ -68,7 +68,7 @@ router.addUser = (req, res) => {
 }
 router.deleteUser = (req, res) => {
 
-    User.findByIdAndRemove(req.params.id, function(err) {
+    User.findOneAndRemove({"username":req.params.username}, function(err) {
         if (err)
             res.json({ message: 'User NOT DELETED!', errmsg : err } );
         else
