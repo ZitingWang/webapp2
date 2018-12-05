@@ -3,6 +3,7 @@ let mongoose = require('mongoose');
 let MessageSchema = new mongoose.Schema({
         sender :{type:String},
         content : {type:String},
+        recipient : {type:String}
     },{versionKey:false},
     { collection: 'messagedb' });
 

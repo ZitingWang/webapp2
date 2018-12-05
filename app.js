@@ -8,6 +8,7 @@ var usersRouter = require('./routes/users');
 const informations = require("./routes/informations");
 const user = require("./routes/user");
 const message = require("./routes/message");
+const Post = require("./routes/Post");
 var app = express();
 
 app.set('views', path.join(__dirname, 'views'));
@@ -50,6 +51,16 @@ app.post('/message',message.addMessage);
 app.delete('/message/:sender', message.deleteMessage);
 app.delete('/message', message.deleteAll);
 app.get('/message/s/find', message.findaoms);
+
+//routes/Post.js
+app.get('/Post', Post.findAll);
+app.get('/Post/:id', Post.findOne);
+app.get('/Post/f/:key', Post.fuzzy);
+app.post('/Post',Post.addPost);
+app.delete('/Post/:writer', Post.deletePost);
+app.get('/Post/t/table', Post.findfromtables);
+app.delete('/Post', Post.deleteAll);
+app.get('/Post/s/find', Post.findlikenumber);
 //routes finish
 
 app.use(function(req, res, next) {

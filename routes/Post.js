@@ -1,5 +1,6 @@
-let Message = require('../models/message');
+let Post = require('../models/post');
 let Information = require('../models/informations');
+let Message = require('../models/message');
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
@@ -18,7 +19,7 @@ db.once('open', function () {
 router.findAll = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
 
-    Message.find(function(err, messages) {
+    Post.find(function(err, messages) {
         if (err)
             res.send(err);
 
@@ -30,9 +31,9 @@ router.findOne = (req, res) => {
 
     res.setHeader('Content-Type', 'application/json');
 
-    Message.find({ "_id" : req.params.id },function(err, message) {
+    Post.find({ "_id" : req.params.id },function(err, message) {
         if (err)
-            res.json({ message: 'Message NOT Found!', errmsg : err } );
+            res.json({ message: 'Post NOT Found!', errmsg : err } );
         else
             res.send(JSON.stringify(message,null,5));
     });
@@ -46,68 +47,88 @@ router.fuzzy = (req, res) =>{
             {content:{$regex:key, $options: '$i'}},
         ]}
 
-    Message.find(whereStr, function (err, message) {
+    Post.find(whereStr, function (err, message) {
         if (err) {
-            res.json({ message: 'Message NOT Found!', errmsg : err } );
+            res.json({ message: 'Post NOT Found!', errmsg : err } );
         } else {
             res.send(JSON.stringify(message,null,5));
         }
     })
 }
 
+router.findfromtables = (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
 
-router.addMessage = (req, res) => {
+    Post.aggregate([
+        {
+            $lookup:{
+                from:"messages",
+                localField: "writer",
+                foreignField:"recipient",
+                as:"comment"
+            }
+        }
+    ],function (err,informations) {
+
+        if (err) {
+            res.json({errmsg: err});
+        } else {
+            res.send(JSON.stringify(informations, null, 5));
+        }
+    });
+}
+
+router.addPost = (req, res) => {
 
     res.setHeader('Content-Type', 'application/json');
-    var message = new Message();
-    message.sender = req.body.sender;
+    var message = new Post();
+    message.writer = req.body.writer;
     message.content = req.body.content;
-    message.recipient = req.body.recipient;
     message.save(function(err) {
         if (err)
-            res.json({ message: 'Message NOT Added!', errmsg : err } );
+            res.json({ message: 'Post NOT Added!', errmsg : err } );
         else
-            res.json({ message: 'Message sent by '+ req.body.sender+' Successfully Added!', data: message });
+            res.json({ message: 'Post sent by '+ req.body.writer+' Successfully Added!', data: message });
     });
 
 
 }
 
 
-router.deleteMessage = (req, res) => {
+router.deletePost = (req, res) => {
 
-    Message.findOneAndRemove({"sender":req.params.sender}, function(err) {
+    Post.findOneAndRemove({"writer":req.params.sender}, function(err) {
         if (err)
-            res.json({ message: 'Message NOT DELETED!', errmsg : err } );
+            res.json({ message: 'Post NOT DELETED!', errmsg : err } );
         else
-            res.json({ message: 'Message Successfully Deleted!'});
+            res.json({ message: 'Post Successfully Deleted!'});
     });
 }
 
 router.deleteAll = (req, res) => {
 
-    Message.remove({}, function(err) {
+    Post.remove({}, function(err) {
         if (err)
-            res.json({ message: 'Messages NOT DELETED!', errmsg : err } );
+            res.json({ message: 'Post NOT DELETED!', errmsg : err } );
         else
-            res.json({ message: 'All of the messages Successfully Deleted!'});
+            res.json({ message: 'All of the Posts Successfully Deleted!'});
     });
 }
 
-router.findaoms = (req, res) => {
+router.findlikenumber = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
 
-    Message.aggregate([
+    Post.aggregate([
         //{$match: {"sender":"wzt"}},
         {$group: {
-            "_id": "$sender",
-            "count": {$sum: 1}}
-        }],function (err,messages) {
+                "_id": "$sender",
+                "count": {$sum: 1}}
+        }],function (err,Posts) {
 
         if (err) {
             res.json({errmsg: err});
         } else {
-            res.send(JSON.stringify(messages, null, 5));
+            res.send(JSON.stringify(Posts, null, 5));
 
         }
     });
