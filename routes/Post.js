@@ -16,6 +16,10 @@ db.once('open', function () {
     console.log('Successfully Connected to [ ' + db.name + ' ] on mlab.com');
 });
 
+let findById = (arr, id) => {
+    let result  = arr.filter(function(o) { return o.id == id;} );
+    return result ? result[0] : null; // or undefined
+}
 router.findAll = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
 
@@ -26,6 +30,18 @@ router.findAll = (req, res) => {
         res.send(JSON.stringify(messages,null,5));
     });
 }
+
+router.editPost = (req, res) => {
+    let post =  findById(Post, req.params.id ) ;
+    if (!post)
+        res.json({ message: 'Post NOT Found!'} );
+    else {
+        post.writer = req.body.writer;
+        post.content = req.body.content;
+        post.likenumber = req.body.likenumber;
+        res.json({ message: 'Post Successfully UpDated!', data: post });
+    }
+};
 
 router.findOne = (req, res) => {
 

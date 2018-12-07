@@ -1,0 +1,9 @@
+{
+  "message": "Post likenumber Successfully Increased!",
+  "data": {
+    "likenumber": 2,
+    "_id": "5c084baaacf18ab660b1ff74",
+    "writer": "bj",
+    "content": "66666"
+  }
+}

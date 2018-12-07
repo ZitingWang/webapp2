@@ -59,7 +59,8 @@ app.get('/Post/f/:key', Post.fuzzy);
 app.post('/Post',Post.addPost);
 app.delete('/Post/:writer', Post.deletePost);
 app.get('/Post/t/table', Post.findfromtables);
-app.put('/Post/:writer', Post.increaselike);
+app.put('/Post/:writer/uplike', Post.increaselike);
+app.put('/Post/:id', Post.editPost);
 app.delete('/Post', Post.deleteAll);
 app.get('/Post/s/find', Post.findlikenumber);
 //routes finish

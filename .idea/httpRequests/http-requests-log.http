@@ -1,3 +1,151 @@
+GET http://localhost:3000/Post/5c084baaacf18ab660b1ff74
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{    "writer": "bj",         "content": "777777"      }
+
+<> 2018-12-07T055626.200.json
+
+###
+
+PUT http://localhost:3000/Post/5c084baaacf18ab660b1ff74
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{    "writer": "bj",         "content": "777777"      }
+
+<> 2018-12-07T055537.500.html
+
+###
+
+PUT http://localhost:3000/Post/5c084baaacf18ab660b1ff74
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{    "writer": "bj",         "content": "777777"      }
+
+<> 2018-12-07T055536.500.html
+
+###
+
+PUT http://localhost:3000/Post/5c084baaacf18ab660b1ff74
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{    "writer": "bj",         "content": "777777"      }
+
+<> 2018-12-07T055107.500.html
+
+###
+
+GET http://localhost:3000/Post
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{    "writer": "bj",         "content": "777777"      }
+
+<> 2018-12-07T055052.200.json
+
+###
+
+PUT http://localhost:3000/Post/bj/uplike
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{    "writer": "bj",         "content": "777777"      }
+
+<> 2018-12-07T055046.200.json
+
+###
+
+PUT http://localhost:3000/Post/bj
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{    "writer": "bj",         "content": "777777"      }
+
+<> 2018-12-07T055038.500.html
+
+###
+
+PUT http://localhost:3000/Post/5c084baaacf18ab660b1ff74
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{    "writer": "bj",         "content": "777777"      }
+
+<> 2018-12-07T054919.500.html
+
+###
+
+PUT http://localhost:3000/Post/5c084baaacf18ab660b1ff74
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{    "writer": "bj",         "content": "777777"      }
+
+<> 2018-12-07T054914.500.html
+
+###
+
+PUT http://localhost:3000/Post/5c084baaacf18ab660b1ff74
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{    "writer": "bj",         "content": "777777"      }
+
+###
+
+PUT http://localhost:3000/Post/5c084baaacf18ab660b1ff74
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{    "writer": "bj",         "content": "777777"      }
+
+###
+
+PUT http://localhost:3000/Post/5c084baaacf18ab660b1ff74
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{    "writer": "bj",         "content": "777777"      }
+
+###
+
+GET http://localhost:3000/Post
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"sender":"ly","content":"66666","recipient":"wzt"}
+
+<> 2018-12-07T054605.200.json
+
+###
+
+PUT http://localhost:3000/Post/bj/uplike
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"sender":"ly","content":"66666","recipient":"wzt"}
+
+<> 2018-12-07T054558.200.json
+
+###
+
 GET http://localhost:3000/Post
 Accept: */*
 Cache-Control: no-cache
@@ -371,160 +519,6 @@ Content-Type: application/json
 {"username" : "wzt", "password": "123456"}
 
 <> 2018-10-26T025153.200.json
-
-###
-
-POST http://localhost:3000/user
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username" : "wzt", "password": "123456"}
-
-<> 2018-10-26T025115.200.json
-
-###
-
-POST http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username" : "wzt", "password": "123456"}
-
-<> 2018-10-26T025104.200.json
-
-###
-
-POST http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":1003,"username": "t","sex": "male"}
-
-<> 2018-10-26T025021.200.json
-
-###
-
-GET http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":1003,"username": "wzt","sex": "male"}
-
-<> 2018-10-26T024921.200.json
-
-###
-
-DELETE http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":1003,"username": "wzt","sex": "male"}
-
-<> 2018-10-26T024915.200.json
-
-###
-
-GET http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":1003,"username": "wzt","sex": "male"}
-
-<> 2018-10-26T024859.200.json
-
-###
-
-DELETE http://localhost:3000/informations/wzt
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":1003,"username": "wzt","sex": "male"}
-
-<> 2018-10-26T024852.200.json
-
-###
-
-GET http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":1003,"username": "wzt","sex": "male"}
-
-<> 2018-10-26T024834.200.json
-
-###
-
-PUT http://localhost:3000/informations/wzt
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":1003,"username": "wzt","sex": "male"}
-
-<> 2018-10-26T024828.200.json
-
-###
-
-GET http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":1003,"username": "wzt","sex": "male"}
-
-<> 2018-10-26T024738.200.json
-
-###
-
-POST http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":1003,"username": "wzt","sex": "male"}
-
-<> 2018-10-26T024733.200.json
-
-###
-
-GET http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":1003,"username": "wzt","sex": "male"}
-
-<> 2018-10-26T024716.200.json
-
-###
-
-GET http://localhost:3000/informations/a/aom
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":1003,"username": "wzt","sex": "male"}
-
-<> 2018-10-26T024707.200.json
-
-###
-
-GET http://localhost:3000/informations/t/table
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":1003,"username": "wzt","sex": "male"}
-
-<> 2018-10-26T024635.200.json
 
 ###
 
