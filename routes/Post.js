@@ -16,10 +16,7 @@ db.once('open', function () {
     console.log('Successfully Connected to [ ' + db.name + ' ] on mlab.com');
 });
 
-let findById = (arr, id) => {
-    let result  = arr.filter(function(o) { return o.id == id;} );
-    return result ? result[0] : null; // or undefined
-}
+
 router.findAll = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
 
@@ -31,17 +28,24 @@ router.findAll = (req, res) => {
     });
 }
 
-router.editPost = (req, res) => {
-    let post =  findById(Post, req.params.id ) ;
-    if (!post)
-        res.json({ message: 'Post NOT Found!'} );
-    else {
-        post.writer = req.body.writer;
-        post.content = req.body.content;
-        post.likenumber = req.body.likenumber;
-        res.json({ message: 'Post Successfully UpDated!', data: post });
-    }
-};
+
+router.editPost = (req,res)=>{
+    Post.findById(req.params.id, function(err,post) {
+        if (err)
+            res.json({ message: "Post NOT Found!", errmsg : err } );
+        else {
+            post.content = req.body.content;
+            post.writer = req.body.writer;
+            post.likenumber = req.body.likenumber;
+            post.save(function (err) {
+                if (err)
+                    res.json({ message: "Post Info Location NOT Change!", errmsg : err } );
+                else
+                    res.json({ message: "Post Info Location Successfully Change!", data: post });
+            });
+        }
+    });
+}
 
 router.findOne = (req, res) => {
 
