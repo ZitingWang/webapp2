@@ -78,6 +78,22 @@ router.findfromtables = (req, res) => {
     });
 }
 
+router.increaselike = (req, res) => {
+
+    Post.findOne({"writer":req.params.writer}, function(err,post) {
+        if (err)
+            res.json({ message: 'Post NOT Found!', errmsg : err } );
+        else {
+            post.likenumber += 1;
+            post.save(function (err) {
+                if (err)
+                    res.json({ message: 'Post likenumber NOT Increased!', errmsg : err } );
+                else
+                    res.json({ message: 'Post likenumber Successfully Increased!', data: post });
+            });
+        }
+    });
+}
 router.addPost = (req, res) => {
 
     res.setHeader('Content-Type', 'application/json');
