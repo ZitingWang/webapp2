@@ -1,3 +1,47 @@
+GET http://localhost:3000/Post
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{    "writer": "wzt",         "content": "777777"      }
+
+<> 2018-12-07T080711.200.json
+
+###
+
+POST http://localhost:3000/Post
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{    "writer": "wzt",         "content": "777777"      }
+
+<> 2018-12-07T080706.200.json
+
+###
+
+GET http://localhost:3000/Post
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{    "writer": "bj",         "content": "777777"      }
+
+<> 2018-12-07T080239.200.json
+
+###
+
+GET http://localhost:3000/Post/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{    "writer": "bj",         "content": "777777"      }
+
+<> 2018-12-07T080237.200.json
+
+###
+
 GET http://localhost:3000/Post/5c084baaacf18ab660b1ff74
 Accept: */*
 Cache-Control: no-cache
@@ -475,50 +519,6 @@ Content-Type: application/json
 {"username" : "wzt", "password": "123456"}
 
 <> 2018-10-26T025228.200.json
-
-###
-
-DELETE http://localhost:3000/informations/wzt
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username" : "wzt", "password": "123456"}
-
-<> 2018-10-26T025224.200.json
-
-###
-
-GET http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username" : "wzt", "password": "123456"}
-
-<> 2018-10-26T025214.200.json
-
-###
-
-DELETE http://localhost:3000/informations/wzt.
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username" : "wzt", "password": "123456"}
-
-<> 2018-10-26T025206.200.json
-
-###
-
-GET http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username" : "wzt", "password": "123456"}
-
-<> 2018-10-26T025153.200.json
 
 ###
 
