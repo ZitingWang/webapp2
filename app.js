@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use(cors);
+app.use(cors());
 // catch 404 and forward to error handler
 
 //routes/informations.js
