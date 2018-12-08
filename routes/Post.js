@@ -133,7 +133,7 @@ router.addPost = (req, res) => {
 
 router.deletePost = (req, res) => {
 
-    Post.findOneAndRemove({"writer":req.params.sender}, function(err) {
+    Post.findOneAndRemove({"writer":req.params.writer}, function(err) {
         if (err)
             res.json({ message: 'Post NOT DELETED!', errmsg : err } );
         else
