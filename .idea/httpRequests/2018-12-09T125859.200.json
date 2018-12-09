@@ -1,0 +1,21 @@
+{
+  "message": "Information NOT Added!",
+  "errmsg": {
+    "errors": {
+      "username": {
+        "message": "Path `username` is required.",
+        "name": "ValidatorError",
+        "properties": {
+          "message": "Path `username` is required.",
+          "type": "required",
+          "path": "username"
+        },
+        "kind": "required",
+        "path": "username"
+      }
+    },
+    "_message": "Information validation failed",
+    "message": "Information validation failed: username: Path `username` is required.",
+    "name": "ValidationError"
+  }
+}

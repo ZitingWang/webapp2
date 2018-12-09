@@ -14,7 +14,7 @@ describe('Informations', function (){
                 .end(function(err, res) {
                     expect(res).to.have.status(200);
                     expect(res.body).to.be.a('array');
-                    expect(res.body.length).to.equal(2);
+                    expect(res.body.length).to.equal(1);
                     done();
                 });
         });
@@ -52,7 +52,7 @@ describe('Informations', function (){
     describe('PUT /informations/:username', () => {
         it('should return a message and the information amountofmessage by 1', function(done) {
             chai.request(server)
-                .put('/informations/ly')
+                .put('/informations/wzt')
                 .end(function(err, res) {
                     expect(res).to.have.status(200);
                     let information = res.body.message ;

@@ -1,3 +1,36 @@
+GET http://localhost:3000/informations
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "wzt","sex": "male"}
+
+<> 2018-12-09T125949.200.json
+
+###
+
+POST http://localhost:3000/informations
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "wzt","sex": "male"}
+
+<> 2018-12-09T125944.200.json
+
+###
+
+POST http://localhost:3000/informations
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"writer": "wzt","content": "777777"}
+
+<> 2018-12-09T125859.200.json
+
+###
+
 GET http://localhost:3000/Post
 Accept: */*
 Cache-Control: no-cache
@@ -496,39 +529,6 @@ Content-Type: application/json
 {"sender":"bj","content":"66666","recipient":"wzt"}
 
 <> 2018-12-05T102427.200.json
-
-###
-
-GET http://localhost:3000/message
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"writer":"bj","content":"66666"}
-
-<> 2018-12-05T100652.200.json
-
-###
-
-GET http://localhost:3000/Post/t/table
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"writer":"bj","content":"66666"}
-
-<> 2018-12-05T100637.200.json
-
-###
-
-GET http://localhost:3000/Post
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"writer":"bj","content":"66666"}
-
-<> 2018-12-05T100554.200.json
 
 ###
 
