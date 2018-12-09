@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "server": "cross-env NODE_ENV=dev PORT=3001 node lib/bin/www",
-    "coverage": "cross-env NODE_ENV=test PORT=4000 nyc mocha test/routes/informations-test.js",
     "start": "npm-run-all test build server",
     "clean": "rimraf ./lib && mkdir lib",
     "postbuild": "npm run server",
