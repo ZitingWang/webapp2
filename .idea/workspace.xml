@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ecb910b5-1171-409e-91e0-4fd782223c07" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Post.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,7 +18,7 @@
     <session id="751064495">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.15" value="1" />
@@ -29,7 +28,8 @@
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -76,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/models/informations.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="11" column="52" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="52" />
+              <caret line="11" column="52" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -85,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/routes/informations.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2147">
-              <caret line="113" column="50" lean-forward="true" selection-start-line="113" selection-start-column="50" selection-end-line="113" selection-end-column="50" />
+              <caret line="113" column="50" selection-start-line="113" selection-start-column="50" selection-end-line="113" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -135,7 +135,7 @@
         <entry file="file://G:/homework/apiTesting/routes/donations.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -144,7 +144,7 @@
         <entry file="file://$PROJECT_DIR$/routes/Post.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="492">
-              <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+              <caret line="134" selection-start-line="134" selection-end-line="134" />
             </state>
           </provider>
         </entry>
@@ -248,11 +248,6 @@
               <item name="mine" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mine" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1610,7 +1605,8 @@
       <workItem from="1541256097231" duration="1568000" />
       <workItem from="1544044573913" duration="4316000" />
       <workItem from="1544192461181" duration="12354000" />
-      <workItem from="1544277407394" duration="20000" />
+      <workItem from="1544277407394" duration="1293000" />
+      <workItem from="1544283514680" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="add a function of post">
       <created>1544193377536</created>
@@ -1630,7 +1626,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76155000" />
+    <option name="totallyTimeSpent" value="78027000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1643,11 +1639,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.85574836" visible="true" weight="0.15595363" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.85209006" visible="true" weight="0.076396205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.14425163" side_tool="true" visible="true" weight="0.15595363" />
+      <window_info id="npm" order="2" sideWeight="0.14790997" side_tool="true" visible="true" weight="0.076396205" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -1657,7 +1652,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286334" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3253796" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.329718" />
       <window_info active="true" anchor="bottom" id="REST Client" order="11" visible="true" weight="0.37852496" />
@@ -1767,14 +1762,14 @@
     <entry file="file://$PROJECT_DIR$/models/informations.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="11" column="52" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="52" />
+          <caret line="11" column="52" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/informations.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2147">
-          <caret line="113" column="50" lean-forward="true" selection-start-line="113" selection-start-column="50" selection-end-line="113" selection-end-column="50" />
+          <caret line="113" column="50" selection-start-line="113" selection-start-column="50" selection-end-line="113" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -1812,14 +1807,14 @@
     <entry file="file://G:/homework/apiTesting/routes/donations.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/Post.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
-          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
         </state>
       </provider>
     </entry>
