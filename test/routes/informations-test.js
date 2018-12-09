@@ -1,11 +1,12 @@
-let chai = require('chai');
-let chaiHttp = require('chai-http');
-let server = require('../../bin/www');
+import chai from 'chai';
+import chaiHttp from 'chai-http' ;
+import server from '../../bin/www';
 let expect = chai.expect;
-chai.use(require('chai-things'));
+import things from 'chai-things'
+chai.use( things);
 chai.use(chaiHttp);
 let _ = require('lodash' );
-let datastore = require('../../models/informations');
+import datastore from '../../models/informations';
 describe('Informations', function (){
     describe('GET /informations',  () => {
         it('should return all the informations in an array', function(done) {
@@ -14,7 +15,7 @@ describe('Informations', function (){
                 .end(function(err, res) {
                     expect(res).to.have.status(200);
                     expect(res.body).to.be.a('array');
-                    expect(res.body.length).to.equal(1);
+                    expect(res.body.length).to.equal(0);
                     done();
                 });
         });
@@ -52,7 +53,7 @@ describe('Informations', function (){
     describe('PUT /informations/:username', () => {
         it('should return a message and the information amountofmessage by 1', function(done) {
             chai.request(server)
-                .put('/informations/wzt')
+                .put('/informations/test')
                 .end(function(err, res) {
                     expect(res).to.have.status(200);
                     let information = res.body.message ;

@@ -5,6 +5,17 @@ Content-Type: application/json
 
 {"username": "wzt","sex": "male"}
 
+<> 2018-12-09T011836.200.json
+
+###
+
+GET http://localhost:3000/informations
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "wzt","sex": "male"}
+
 <> 2018-12-09T125949.200.json
 
 ###
@@ -518,17 +529,6 @@ Content-Type: application/json
 {"sender":"bj","content":"66666","recipient":"wzt"}
 
 <> 2018-12-05T102440.200.json
-
-###
-
-POST http://localhost:3000/message
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"sender":"bj","content":"66666","recipient":"wzt"}
-
-<> 2018-12-05T102427.200.json
 
 ###
 
