@@ -6,6 +6,12 @@
     "server": "cross-env NODE_ENV=dev PORT=3001 node lib/bin/www",
     "start": "npm-run-all test build server",
     "clean": "rimraf ./lib && mkdir lib",
+    "postbuild": "npm run server",
+    "lint": "esw  app.js",
+    "lint:watch": "npm run lint -- --watch",
+    "server:watch": "cross-env NODE_ENV=dev nodemon --exec babel-node bin/www",
+    "test:watch": "npm run test -- --watch",
+    "prebuild": "npm-run-all test clean",
     "test": "cross-env NODE_ENV=test mocha --compilers js:babel-core/register test/routes/*.js",
     "build": "babel ./ --out-dir lib/ --ignore ./node_modules,./.babelrc,./package.json,./package-lock.json,./test --copy-files"
   },
@@ -28,7 +34,11 @@
     "chai-http": "^2.0.1",
     "chai-things": "^0.2.0",
     "cross-env": "^5.2.0",
+    "eslint": "^5.10.0",
+    "eslint-plugin-json": "^1.3.2",
+    "eslint-watch": "^4.0.2",
     "mocha": "^3.4.2",
+    "nodemon": "^1.18.7",
     "npm-run-all": "^4.1.5",
     "rimraf": "^2.6.2"
   }

@@ -6,7 +6,6 @@ import things from 'chai-things'
 chai.use( things);
 chai.use(chaiHttp);
 let _ = require('lodash' );
-import datastore from '../../models/informations';
 describe('Informations', function (){
     describe('GET /informations',  () => {
         it('should return all the informations in an array', function(done) {
