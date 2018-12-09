@@ -2,11 +2,13 @@ dist: trusty
 language: node_js
 node_js:
 - stable
+script:
+- npm run coverage
 branches:
    only: development
 notifications:
    email:
       recipients:
-      - 20082254@mail.wit.ie        
-      on_success: never        
-      on_failure: always    
+      - 20082254@mail.wit.ie
+      on_success: never
+      on_failure: always
