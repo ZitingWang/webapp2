@@ -5,6 +5,7 @@
   "scripts": {
     "server": "cross-env NODE_ENV=dev PORT=3001 node lib/bin/www",
     "coverage": "cross-env NODE_ENV=test PORT=4000 nyc mocha test/routes/*.js",
+    "publish-coverage": "nyc report --reporter=text-lcov | coveralls",
     "start": "npm-run-all test build server",
     "clean": "rimraf ./lib && mkdir lib",
     "postbuild": "npm run server",
@@ -35,6 +36,7 @@
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
     "chai-things": "^0.2.0",
+    "coveralls": "^2.13.1",
     "cross-env": "^5.2.0",
     "eslint": "^5.10.0",
     "eslint-plugin-json": "^1.3.2",
