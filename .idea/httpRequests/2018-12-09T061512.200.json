@@ -1,0 +1,16 @@
+[
+  {
+    "amountofmessage": 0,
+    "_id": "5c0d573a77e28a8718dd980b",
+    "id": 999,
+    "username": "wzt",
+    "sex": "male"
+  },
+  {
+    "amountofmessage": 0,
+    "_id": "5c0d5b9d4d4cb98cb862fa2b",
+    "id": 1000,
+    "username": "test",
+    "sex": "male"
+  }
+]

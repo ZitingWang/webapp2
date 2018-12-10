@@ -63,7 +63,7 @@ router.fuzzy = (req, res) =>{
     var key = req.params.key;
     var whereStr = {$or:[
             //{_id:{$regex:key}},
-            {sender:{$regex:key,$options: '$i'}},
+            {writer:{$regex:key,$options: '$i'}},
             {content:{$regex:key, $options: '$i'}},
         ]}
 

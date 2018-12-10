@@ -42,7 +42,7 @@ app.get('/user', user.findAll);
 app.get('/user/:id', user.findOne);
 app.get('/user/f/:key', user.fuzzy);
 app.post('/user',user.addUser);
-app.delete('/user/:id', user.deleteUser);
+app.delete('/user/:username', user.deleteUser);
 app.delete('/user', user.deleteAll);
 
 //routes/message.js

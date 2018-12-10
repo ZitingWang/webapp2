@@ -1,0 +1,30 @@
+[
+  {
+    "amountofmessage": 0,
+    "_id": "5c0d5eb63c234784e0d8245b",
+    "id": 998,
+    "username": "bj",
+    "sex": "male"
+  },
+  {
+    "amountofmessage": 0,
+    "_id": "5c0d5ec53c234784e0d8245c",
+    "id": 999,
+    "username": "wzt",
+    "sex": "male"
+  },
+  {
+    "amountofmessage": 2,
+    "_id": "5c0d5ee168244d9010713fbb",
+    "id": 1000,
+    "username": "test",
+    "sex": "male"
+  },
+  {
+    "amountofmessage": 0,
+    "_id": "5c0d5f8dd79d9f819ce7abd5",
+    "id": 1000,
+    "username": "test",
+    "sex": "male"
+  }
+]
