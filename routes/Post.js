@@ -30,7 +30,7 @@ router.findAll = (req, res) => {
 
 
 router.editPost = (req,res)=>{
-    Post.findById(req.params.id, function(err,post) {
+    Post.findOne({"writer":req.params.writer}, function(err,post) {
         if (err)
             res.json({ message: "Post NOT Found!", errmsg : err } );
         else {
@@ -38,9 +38,9 @@ router.editPost = (req,res)=>{
             post.writer = req.body.writer;
             post.likenumber = req.body.likenumber;
             post.save(function (err) {
-                if (err)
-                    res.json({ message: "Post Info Location NOT Change!", errmsg : err } );
-                else
+                //if (err)
+                  //  res.json({ message: "Post Info Location NOT Change!", errmsg : err } );
+                //else
                     res.json({ message: "Post Info Location Successfully Change!", data: post });
             });
         }

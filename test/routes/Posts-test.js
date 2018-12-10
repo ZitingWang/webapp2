@@ -7,6 +7,7 @@ chai.use( things);
 chai.use(chaiHttp);
 import _ from 'lodash';
 import request from 'supertest';
+import  mongoose from "mongoose";
 describe('Posts', function (){
     describe('GET /Post',  () => {
         it('should return all the posts in an array', function(done) {
@@ -23,6 +24,7 @@ describe('Posts', function (){
     describe('POST /Post', function () {
         it('should return confirmation message and update datastore', function(done) {
             let post = {
+                _id:mongoose.Types.ObjectId('5be1690731a5c256ad574fb4'),
                 writer: 'test' ,
                 content: 'xxxxxx',
                 likenumber: 0
@@ -74,6 +76,24 @@ describe('Posts', function (){
                     expect(res).to.have.status(200);
                     let information = res.body.message ;
                     expect(information).to.include('Post likenumber Successfully Increased!');
+                    done();
+                });
+        });
+    });
+    describe('PUT /Post/:writer', () => {
+        it('should return a message and the information amountofmessage by 1', function(done) {
+            let post = {
+                writer: 'test' ,
+                content: 'mmmmmmmm',
+                likenumber: 0
+            };
+            request(server)
+                .put('/Post/test')
+                .send(post)
+                .end(function(err, res) {
+                    expect(res).to.have.status(200);
+                    let information = res.body.message ;
+                    expect(information).to.include('Post Info Location Successfully Change!');
                     done();
                 });
         });
