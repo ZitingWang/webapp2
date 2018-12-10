@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecb910b5-1171-409e-91e0-4fd782223c07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-12-09T062327.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-12-09T062332.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-12-09T062335.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/routes/user-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/routes/user-test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -66,7 +63,7 @@
           <entry key="gitignore" value="1" />
           <entry key="js" value="3041" />
           <entry key="json" value="46" />
-          <entry key="txt" value="46" />
+          <entry key="txt" value="57" />
           <entry key="yml" value="3" />
         </counts>
       </usages-collector>
@@ -75,7 +72,7 @@
           <entry key="EJS" value="41" />
           <entry key="JSON" value="46" />
           <entry key="JavaScript" value="3041" />
-          <entry key="PLAIN_TEXT" value="47" />
+          <entry key="PLAIN_TEXT" value="58" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -125,8 +122,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/routes/user-test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2697">
-              <caret line="93" column="58" selection-start-line="93" selection-start-column="58" selection-end-line="93" selection-end-column="58" />
+            <state>
+              <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
                 <element signature="e#194#218#0" expanded="true" />
@@ -1673,7 +1670,7 @@
       <workItem from="1544277407394" duration="1293000" />
       <workItem from="1544283514680" duration="599000" />
       <workItem from="1544359631717" duration="18798000" />
-      <workItem from="1544455126436" duration="3421000" />
+      <workItem from="1544455126436" duration="3482000" />
     </task>
     <task id="LOCAL-00001" summary="add a function of post">
       <created>1544193377536</created>
@@ -1703,11 +1700,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544458592556</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix bug">
+      <created>1544458728720</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544458728720</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100246000" />
+    <option name="totallyTimeSpent" value="100307000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1818,7 +1822,8 @@
     <MESSAGE value="add a function of editpost" />
     <MESSAGE value="test update" />
     <MESSAGE value="test update2" />
-    <option name="LAST_COMMIT_MESSAGE" value="test update2" />
+    <MESSAGE value="fix bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://G:/homework/qualityLab/test/catalogue-test.js">
@@ -2092,8 +2097,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/routes/user-test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2697">
-          <caret line="93" column="58" selection-start-line="93" selection-start-column="58" selection-end-line="93" selection-end-column="58" />
+        <state>
+          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
             <element signature="e#194#218#0" expanded="true" />

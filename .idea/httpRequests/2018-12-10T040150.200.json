@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "5bd304a01cfbbb49085ee606",
+    "sender": "bj",
+    "content": "This mine!"
+  },
+  {
+    "_id": "5bd304aa1cfbbb49085ee607",
+    "sender": "ly",
+    "content": "This mine!"
+  },
+  {
+    "_id": "5c08501b6663b1a0c8721b4c",
+    "sender": "bj",
+    "content": "66666",
+    "recipient": "wzt"
+  },
+  {
+    "_id": "5c08506b6663b1a0c8721b4d",
+    "sender": "ly",
+    "content": "66666",
+    "recipient": "wzt"
+  }
+]
