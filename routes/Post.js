@@ -1,4 +1,4 @@
-let Post = require('../models/post');
+import Post from '../models/post';
 let Information = require('../models/informations');
 let Message = require('../models/message');
 let express = require('express');

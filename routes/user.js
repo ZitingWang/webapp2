@@ -1,5 +1,5 @@
-let User = require('../models/users');
-let express = require('express');
+import User from '../models/users';
+import express from 'express';
 let router = express.Router();
 let mongoose = require('mongoose');
 var mongodbUri = 'mongodb://WZT:NBNBwzt155@ds139193.mlab.com:39193/heroku_45x9jh4d'

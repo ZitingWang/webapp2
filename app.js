@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const informations = require('./routes/informations');
-const user = require('./routes/user');
+import user from './routes/user';
 const message = require('./routes/message');
 const Post = require('./routes/Post');
 

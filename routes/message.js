@@ -1,4 +1,4 @@
-let Message = require('../models/message');
+import Message from '../models/message';
 let Information = require('../models/informations');
 let express = require('express');
 let router = express.Router();
