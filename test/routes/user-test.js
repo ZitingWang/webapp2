@@ -17,7 +17,7 @@ describe('User', function (){
                 .end(function(err, res) {
                     expect(res).to.have.status(200);
                     expect(res.body).to.be.a('array');
-                    expect(res.body.length).to.equal(3);
+                    expect(res.body.length).to.equal(1);
                     let result = _.map(res.body, (inf) => {
                         return {username: inf.username,
                             password: inf.password}
@@ -64,7 +64,7 @@ describe('User', function (){
                 .end(function(err, res) {
                     expect(res).to.have.status(200);
                     expect(res.body).to.be.a('array');
-                    expect(res.body.length).to.equal(4);
+                    expect(res.body.length).to.equal(2);
                     let result = _.map(res.body, (inf) => {
                         return {username: inf.username,
                             password: inf.password}
@@ -91,7 +91,7 @@ describe('User', function (){
                     .get('/user')
                     .end(function(err, res) {
                         expect(res).to.have.status(200);
-                        expect(res.body.length).to.equal(4);
+                        expect(res.body.length).to.equal(1);
                         done();
                     });
             });
