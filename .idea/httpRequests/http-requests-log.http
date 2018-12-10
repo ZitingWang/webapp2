@@ -3,6 +3,127 @@ Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
+{"username": "bj","password": "b123456"}
+
+<> 2018-12-10T041745.200.json
+
+###
+
+POST http://localhost:3000/user
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "bj","password": "b123456"}
+
+<> 2018-12-10T041741.200.json
+
+###
+
+POST http://localhost:3000/user
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{,"username": "bj","password": "b123456"}
+
+<> 2018-12-10T041731.400.html
+
+###
+
+GET http://localhost:3000/user
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id":999,"username": "wzt","sex": "male"}
+
+<> 2018-12-10T041600.200.json
+
+###
+
+DELETE http://localhost:3000/user
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id":999,"username": "wzt","sex": "male"}
+
+<> 2018-12-10T041556.200.json
+
+###
+
+GET http://localhost:3000/user
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id":999,"username": "wzt","sex": "male"}
+
+<> 2018-12-10T041537.200.json
+
+###
+
+GET http://localhost:3000/user/test
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id":999,"username": "wzt","sex": "male"}
+
+<> 2018-12-10T041532.200.json
+
+###
+
+DELETE http://localhost:3000/user/test
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id":999,"username": "wzt","sex": "male"}
+
+<> 2018-12-10T041527-1.200.json
+
+###
+
+DELETE http://localhost:3000/user/test
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id":999,"username": "wzt","sex": "male"}
+
+<> 2018-12-10T041527.200.json
+
+###
+
+DELETE http://localhost:3000/user/test
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id":999,"username": "wzt","sex": "male"}
+
+<> 2018-12-10T041523.200.json
+
+###
+
+GET http://localhost:3000/user
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id":999,"username": "wzt","sex": "male"}
+
+<> 2018-12-10T041509.200.json
+
+###
+
+GET http://localhost:3000/user
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
 {"id":999,"username": "wzt","sex": "male"}
 
 <> 2018-12-10T040952.200.json
@@ -424,127 +545,6 @@ Content-Type: application/json
 {"id":998,"username": "bj","sex": "male"}
 
 <> 2018-12-09T062411.200.json
-
-###
-
-GET http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":999,"username": "wzt","sex": "male"}
-
-<> 2018-12-09T062335.200.json
-
-###
-
-POST http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":999,"username": "wzt","sex": "male"}
-
-<> 2018-12-09T062332.200.json
-
-###
-
-GET http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":999,"username": "wzt","sex": "male"}
-
-<> 2018-12-09T062327.200.json
-
-###
-
-GET http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":999,"username": "wzt","sex": "male"}
-
-<> 2018-12-09T062326.200.json
-
-###
-
-GET http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":999,"username": "wzt","sex": "male"}
-
-<> 2018-12-09T061531.200.json
-
-###
-
-DELETE http://localhost:3000/informations/test
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":999,"username": "wzt","sex": "male"}
-
-<> 2018-12-09T061525.200.json
-
-###
-
-GET http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":999,"username": "wzt","sex": "male"}
-
-<> 2018-12-09T061512.200.json
-
-###
-
-GET http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":999,"username": "wzt","sex": "male"}
-
-<> 2018-12-09T055615.200.json
-
-###
-
-POST http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"id":999,"username": "wzt","sex": "male"}
-
-<> 2018-12-09T055610.200.json
-
-###
-
-DELETE http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username": "wzt","sex": "male"}
-
-<> 2018-12-09T055551.200.json
-
-###
-
-GET http://localhost:3000/informations
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username": "wzt","sex": "male"}
-
-<> 2018-12-09T055545.200.json
 
 ###
 

@@ -28,7 +28,7 @@ describe('User', function (){
         });
         it('should return one of the users in an array', function(done) {
             request(server)
-                .get('/user/5bd304f31cfbbb49085ee608')
+                .get('/user/5c0e91a56f3b1029743e53c5')
                 .end(function (err, res) {
                     expect(res).to.have.status(200);
                     expect(res.body).to.be.a('array');
