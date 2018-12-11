@@ -8,9 +8,6 @@ var mongodbUri = 'mongodb://WZT:NBNBwzt155@ds139193.mlab.com:39193/heroku_45x9jh
 mongoose.connect(mongodbUri);
 
 let db = mongoose.connection;
-db.on('error', function (err) {
-    console.log('Unable to Connect to [ ' + db.name + ' ]', err);
-});
 
 db.once('open', function () {
     console.log('Successfully Connected to [ ' + db.name + ' ] on mlab.com');
@@ -20,9 +17,6 @@ router.findAll = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
 
     Information.find(function(err, informations) {
-        if (err)
-            res.send(err);
-
         res.send(JSON.stringify(informations,null,5));
     });
 }
@@ -32,15 +26,10 @@ router.findOne = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
 
     Information.find({ "_id" : req.params.id },function(err, information) {
-        if (err)
-            res.json({ message: 'Information NOT Found!', errmsg : err } );
-        else
             res.send(JSON.stringify(information,null,5));
     });
 }
 router.findfromtables = (req, res) => {
-    res.setHeader('Content-Type', 'application/json');
-
     Information.aggregate([
         {
             $lookup:{
